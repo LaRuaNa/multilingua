@@ -254,7 +254,7 @@ export default function Home() {
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
             </div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-              <div className="grid lg:grid lg:grid-cols-3 lg:gap-8">
+              <div className="grid gap-6 lg:grid lg:grid-cols-3 lg:gap-8">
                 <section>
                   <ProgramHeader title="September 4" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
                   <ol
@@ -474,7 +474,7 @@ export default function Home() {
               <Accordion type="single" collapsible>
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={index.toString()} >
-                    < AccordionTrigger> {faq.question}</AccordionTrigger>
+                    < AccordionTrigger className="text-left"> {faq.question}</AccordionTrigger>
                     <AccordionContent>
                       {faq.answer}
                     </AccordionContent>
