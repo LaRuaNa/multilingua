@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     question: "How can I participate in sports activities?",
-    answer: "Sports activities like Bachata dancing, Acro Yoga, bouldering, and the Dragon Boat Race are open to all participants. Simply join in during the scheduled times."
+    answer: "Sports activities like Bachata dancing, Acro Yoga, bouldering, and the Dragon Boat Race are open to all participants (fee may apply)."
   },
   {
     question: "Is the event suitable for beginners in German language learning?",
@@ -137,14 +137,14 @@ export default function Home() {
             <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
               <h1 className="font-display text-5xl font-bold tracking-tighter text-green-600 sm:text-7xl">
                 <span className="sr-only">DeceptiConf - </span>A conference
-                for language nerds.
+                for language enthusiasts.
               </h1>
               <div className="mt-6 space-y-6 font-display text-2xl tracking-tight leading-10 text-green-800">
                 <p>
-                  Experience &quot;Multi Lingua&quot; at a unique venue! Our event takes place in a beautifully preserved, historic train station that boasts a rich history and charming surroundings.     </p>
-                <p>Just 30 minutes by public transport from the center of Osnabrück, this tranquil location offers the perfect blend of peace, nature, and culture. With a nearby river and picturesque landscapes, the setting invites relaxing walks and inspiring conversations.
-
+                  MultiLingua Osnabrück is a multi-day event that aims to bring together language enthusiasts, professionals, and content creators from around the world to share knowledge, foster connections, and celebrate linguistic diversity
                 </p>
+                <p>
+                  Experience &quot;Multi Lingua&quot; at a unique venue! Our event takes place in a beautifully preserved, historic train station that boasts a rich history and charming surroundings.     </p>
               </div>
               <a
                 className="inline-flex justify-center rounded-2xl bg-green-600 p-4 text-base font-semibold text-white hover:bg-green-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 active:text-white/70 mt-10 w-full sm:hidden"
@@ -210,8 +210,7 @@ export default function Home() {
                 Speakers
               </h2>
               <p className="mt-4 font-display text-2xl tracking-tight text-green-900">
-                Learn from the experts on the cutting-edge of deception at the most
-                sinister companies.
+                Learn from the language enthusiasts, content creators, and experts in the language learning field
               </p>
             </div>
             <div className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4">
@@ -244,13 +243,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
               <h2 className="font-display text-4xl font-medium tracking-tighter text-green-600 sm:text-5xl leading-[3rem]">
-                Our three day schedule is jam-packed with brilliant, creative, evil
-                geniuses.
+                Our four day schedule is packed with fascinating talks, language crash courses, games and workshops.
               </h2>
               <p className="mt-4 font-display text-2xl tracking-tight text-green-900 leading-10">
-                The worst people in our industry giving the best talks you’ve ever
-                seen. Nothing will be recorded and every attendee has to sign an NDA
-                to watch the talks.
+                Listen to interesting lectures, get introduced to new languages, participate in fun activities, network and foster connections with other language enthusiasts.
               </p>
             </div>
           </div>
@@ -262,7 +258,7 @@ export default function Home() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
               <div className="grid lg:auto-cols-[33%] gap-6 grid-flow-col overflow-x-auto">
                 <section>
-                  <ProgramHeader title="September 4" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
+                  <ProgramHeader title="September 4" desc={"Opening ceremony"} />
                   <ol
                     role="list"
                     className="mt-10 space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-green-900/5 backdrop-blur"
@@ -275,7 +271,7 @@ export default function Home() {
                   </ol>
                 </section>
                 <section >
-                  <ProgramHeader title="September 5" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
+                  <ProgramHeader title="September 5" desc={"The German day"} />
                   <ol
                     role="list"
                     className="mt-10 space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-green-900/5 backdrop-blur"
@@ -299,7 +295,7 @@ export default function Home() {
                   </ol>
                 </section>
                 <section>
-                  <ProgramHeader title="September 6" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
+                  <ProgramHeader title="September 6" desc={"The international day"} />
                   <ol
                     role="list"
                     className="mt-10 space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-green-900/5 backdrop-blur"
@@ -329,7 +325,7 @@ export default function Home() {
                   </ol>
                 </section>
                 <section>
-                  <ProgramHeader title="September 7" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
+                  <ProgramHeader title="September 7" desc={"The Venezuelan day"} />
                   <ol
                     role="list"
                     className="mt-10 space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-green-900/5 backdrop-blur"
@@ -359,7 +355,7 @@ export default function Home() {
                   </ol>
                 </section>
                 <section>
-                  <ProgramHeader title="September 8" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
+                  <ProgramHeader title="September 8" desc={"The relaxing day"} />
                   <ol
                     role="list"
                     className="mt-10 space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-green-900/5 backdrop-blur"
