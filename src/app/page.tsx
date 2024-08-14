@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Logo from "@/components/logo";
+
 const events = [
   { title: "Welcome and Introduction", time: "6:00 PM - 7:00 PM", date: "Seprember 4" },
   { title: "Dinner (We order together.)", time: "7:00 PM - 8:00 PM", date: "Seprember 4" },
@@ -51,7 +51,13 @@ const events = [
   { title: "Closing Ceremony", time: "10:00 PM ", date: "Seprember 8" },
 
 ]
-const speakers = events.filter(event => event.name);
+const speakers = events.filter(event => event?.name).map(event => event.name!);
+const uniqueSpeakers = Array.from(new Set(speakers));
+console.log(uniqueSpeakers);
+
+
+
+
 const faqs = [
   {
     question: "Where is the event located?",
@@ -224,7 +230,7 @@ export default function Home() {
                 <div
                   className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-4"
                 >
-                  {speakers.map((speaker, index) => (
+                  {uniqueSpeakers.map((speaker, index) => (
                     <Speaker key={index} speaker={speaker} />
                   ))}
                 </div>
@@ -254,7 +260,7 @@ export default function Home() {
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
             </div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-              <div className="grid gap-6 lg:grid lg:grid-cols-3 lg:gap-8">
+              <div className="grid lg:auto-cols-[33%] gap-6 grid-flow-col overflow-x-auto">
                 <section>
                   <ProgramHeader title="September 4" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
                   <ol
@@ -268,7 +274,7 @@ export default function Home() {
                     <ProgramItem title={events[2].title} time={events[2].time} name={events[2]?.name} date={events[2].date} />
                   </ol>
                 </section>
-                <section>
+                <section >
                   <ProgramHeader title="September 5" desc={"The first day of the conference is focused on dark patterns for ecommerce."} />
                   <ol
                     role="list"
@@ -560,11 +566,8 @@ function Speaker({ speaker }: { speaker: typeof speakers[number] }) {
         />
       </div>
       <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-        {speaker.name}
+        {speaker}
       </h3>
-      <p className="mt-1 text-base tracking-tight text-slate-500">
-        {speaker.title}
-      </p>
     </div>
   )
 }
